@@ -1,85 +1,24 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
 require('../require')
-var app = requireRoot('lib/app')
-var http = require('http')
+const createApp = requireRoot('lib/app')
 
-/**
- * Get port from environment and store in Express.
- */
+let isShutdown = false
 
-var port = normalizePort(process.env.PORT || '3000')
-app.set('port', port)
-
-/**
- * Create HTTP server.
- */
-
-var server = http.createServer(app)
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port)
-server.on('error', onError)
-server.on('listening', onListening)
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort (val) {
-	var port = parseInt(val, 10)
-
-	if (isNaN(port)) {
-		// named pipe
-		return val
+process.on('SIGINT', async () => {
+	if (isShutdown) {
+		return
 	}
 
-	if (port >= 0) {
-		// port number
-		return port
-	}
+	isShutdown = true
+	console.log('Start stoping server')
 
-	return false
-}
+	await app.stopAsync()
 
-/**
- * Event listener for HTTP server "error" event.
- */
+	console.log('Server successfully stopped')
+	process.exit(0)
+})
 
-function onError (error) {
-	if (error.syscall !== 'listen') {
-		throw error
-	}
+const app = createApp()
 
-	var bind = typeof port === 'string'
-		? 'Pipe ' + port
-		: 'Port ' + port
-
-	// handle specific listen errors with friendly messages
-	switch (error.code) {
-	case 'EACCES':
-		console.error(bind + ' requires elevated privileges')
-		process.exit(1)
-	case 'EADDRINUSE':
-		console.error(bind + ' is already in use')
-		process.exit(1)
-	default:
-		throw error
-	}
-}
-
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening () {
-	var addr = server.address()
-	console.log('Server started on', addr.address, addr.port)
-}
+app.startAsync()

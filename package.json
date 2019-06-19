@@ -16,7 +16,8 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
-    "ocore": "git+https://github.com/byteball/ocore.git#rocks-and-formulas"
+    "ocore": "git+https://github.com/byteball/ocore.git#rocks-and-formulas",
+    "headless-obyte": "git+https://github.com/byteball/headless-obyte.git"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
