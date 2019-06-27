@@ -1,4 +1,4 @@
-# TimeX backend
+# Oscript Editor backend
 
 ## Prerequisites
 

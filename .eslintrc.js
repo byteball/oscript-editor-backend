@@ -11,6 +11,8 @@ module.exports = {
   "rules": {
     'indent': ['error', 'tab'],
 		'no-tabs': 'off',
-    "no-unused-expressions": 0,
+		"no-unused-expressions": 0,
+		'no-console': 'error',
+		'no-debugger': 'error'
   }
 }
