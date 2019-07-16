@@ -3,7 +3,7 @@
 exports.port = null
 // exports.myUrl = 'wss://mydomain.com/bb';
 exports.bServeAsHub = false
-exports.bLight = true
+exports.bLight = false
 
 exports.storage = 'sqlite'
 
