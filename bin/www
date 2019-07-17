@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+require('../require')
+const createApp = requireRoot('lib/app')
+
+let isShutdown = false
+
+process.on('SIGINT', async () => {
+	if (isShutdown) {
+		return
+	}
+
+	isShutdown = true
+	console.log('Start stoping server')
+
+	await app.stopAsync()
+
+	console.log('Server successfully stopped')
+	process.exit(0)
+})
+
+const app = createApp()
+
+app.startAsync()
