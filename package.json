@@ -13,7 +13,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "express": "~4.16.1",
-    "headless-obyte": "git+https://github.com/byteball/headless-obyte.git",
+    "headless-obyte": "git+https://github.com/byteball/headless-obyte.git#aa",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
