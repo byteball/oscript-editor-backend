@@ -11,16 +11,14 @@ exports.storage = 'sqlite'
 // exports.socksHost = '127.0.0.1';
 // exports.socksPort = 9050;
 
-exports.WS_PROTOCOL = 'ws://'
-
-exports.hub = 'localhost:6611'
+exports.hub = process.env.devnet ? 'localhost:6611' : (process.env.testnet ? 'obyte.org/bb-test' : 'obyte.org/bb');
 exports.deviceName = 'oscript editor backend'
 exports.permanent_pairing_secret = '*' // * allows to pair with any code, the code is passed as 2nd param to the pairing event handler
 exports.control_addresses = ['']
 exports.payout_address = 'WHERE THE MONEY CAN BE SENT TO'
 
 exports.bIgnoreUnpairRequests = true
-exports.bSingleAddress = false
+exports.bSingleAddress = true
 exports.bStaticChangeAddress = true
 exports.KEYS_FILENAME = 'keys.json'
 
