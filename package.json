@@ -12,12 +12,14 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
-    "express": "~4.16.1",
+    "express": "~4.17.0",
     "headless-obyte": "git+https://github.com/byteball/headless-obyte.git#aa",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "lodash": "^4.17.15",
     "morgan": "~1.9.1",
-    "ocore": "git+https://github.com/byteball/ocore.git#rocks-and-formulas"
+    "ocore": "git+https://github.com/byteball/ocore.git#rocks-and-formulas",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
