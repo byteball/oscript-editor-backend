@@ -13,13 +13,13 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "express": "~4.17.0",
-    "headless-obyte": "git+https://github.com/byteball/headless-obyte.git#aa",
+    "headless-obyte": "git+https://github.com/byteball/headless-obyte.git",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "lodash": "^4.17.15",
     "morgan": "~1.9.1",
     "obyte": "^0.1.7",
-    "ocore": "git+https://github.com/byteball/ocore.git#rocks-and-formulas",
+    "ocore": "git+https://github.com/byteball/ocore.git",
     "shortid": "^2.2.15"
   },
   "devDependencies": {
