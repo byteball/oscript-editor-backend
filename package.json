@@ -18,6 +18,7 @@
     "jade": "~1.11.0",
     "lodash": "^4.17.15",
     "morgan": "~1.9.1",
+    "obyte": "^0.1.7",
     "ocore": "git+https://github.com/byteball/ocore.git#rocks-and-formulas",
     "shortid": "^2.2.15"
   },
