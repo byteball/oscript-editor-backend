@@ -25,3 +25,5 @@ exports.KEYS_FILENAME = 'keys.json'
 // emails
 exports.admin_email = ''
 exports.from_email = ''
+
+exports.webPort = process.env.testnet ? 3001 : 3000;
