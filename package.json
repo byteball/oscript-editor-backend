@@ -2,7 +2,7 @@
   "author": "Obyte",
   "license": "MIT",
   "name": "oscript-editor-backend",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Backend for Oscript Editor Online ",
   "private": true,
   "scripts": {
