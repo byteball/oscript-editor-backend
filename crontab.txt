@@ -1,0 +1,1 @@
+*/20 * * * * cd oscript-editor-backend; node check_daemon.js 1>>~/.config/oscript-editor-backend/check_daemon.log 2>>~/.config/oscript-editor-backend/check_daemon.err
