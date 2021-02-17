@@ -32,6 +32,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "pre-commit": "^1.2.2"
   },
+  "resolutions": {
+    "level-rocksdb": "^4.0.0"
+  },
   "pre-commit": [
     "lint"
   ]
