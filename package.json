@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "node bin/www",
-    "start": "node bin/www",
+    "start": "node bin/www oscript",
     "lint": "node ./node_modules/.bin/eslint --ext .js --max-warnings=0 --fix lib"
   },
   "dependencies": {
